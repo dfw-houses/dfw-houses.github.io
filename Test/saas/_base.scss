@@ -1,0 +1,92 @@
+// COLOR VARIABLES 
+$color-primary: #490505;
+$color-primary-2: #af9a7d;
+$color-primary-dark: #550202;
+
+$color-secondary: #990606;
+$color-secondary-1: #101d2c;
+
+$color-grey-light-1: #dd6749;
+$color-grey-light-2: #aaa;
+$color-grey-1: #D7D7D7;
+
+$color-grey-dark-1: #ee8585;
+$color-grey-dark-2: #f15f5f;
+$brown-light-1: #e97451;
+$tertiary-color: #f9f7f6;
+
+// Global styling 
+$sections-padding: 10rem 0;
+$color-black: #000;
+
+// FONTS VARIBLES 
+$font-primary: 'Nunito',
+sans-serif;
+// $font-primary: Verdana, Geneva, Tahoma, sans-serif;
+$font-display: 'Josefin Sans',
+sans-serif;
+$font-color-1: whitesmoke;
+$default-font-weight: 300;
+
+// media queries break points 
+$bp-medium: 50em; // 800px;
+$bp-below-700: 43.75em; //700px
+$bp-small: 37.5em; // 600px;;
+$bp-smallest: 31.25em; // 500px
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.container {
+    display: grid;
+
+
+    grid-template-rows: 10vh 100vh min-content min-content repeat(3, min-content);
+    // grid-template-columns: 8rem 1fr repeat(8, minmax(min-content, 14rem)) 1fr;
+    grid-template-columns: [full-start] 1fr [center-start]repeat(8, [col-start]minmax(min-content, 14rem)[col-end])[center-end] 1fr[full-end];
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-rows: 65vh 75vh min-content min-content repeat(3, min-content);
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-rows: 45vh 60vh min-content min-content repeat(3, min-content);
+    }
+
+}
+
+.properties-container {
+    display: grid;
+
+
+    grid-template-rows: 10vh 40vh min-content min-content repeat(3, min-content);
+    // grid-template-columns: 8rem 1fr repeat(8, minmax(min-content, 14rem)) 1fr;
+    grid-template-columns: [full-start] 1fr [center-start]repeat(8, [col-start]minmax(min-content, 14rem)[col-end])[center-end] 1fr[full-end];
+}
+
+.single-listing {
+    display: grid;
+
+
+    grid-template-rows: 10vh 40vh min-content min-content repeat(3, min-content);
+    // grid-template-columns: 8rem 1fr repeat(8, minmax(min-content, 14rem)) 1fr;
+    grid-template-columns: [full-start] 1fr [center-start]1fr repeat(8, [col-start]minmax(min-content, 14rem)[col-end]) 1fr[center-end] 1fr [full-end];
+}

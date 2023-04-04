@@ -1,0 +1,94 @@
+.header {
+    background-color: $tertiary-color;
+    // background-color: rgba($color-grey-dark-1, .1);
+    z-index: 100;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    grid-column: full-start / full-end;
+
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 2.5em;
+    padding: 0 40px;
+
+    @media only screen and (max-width: $bp-smallest) {}
+
+    &__logo {
+        display: grid;
+        justify-content: start;
+        align-content: center;
+
+        @media only screen and (max-width: $bp-medium) {
+            align-self: center;
+            justify-self: center;
+            grid-column: 1 / 3;
+        }
+
+        &--img {
+            height: 6rem;
+            margin-left: 2rem;
+            transition: all .2s;
+
+            @media only screen and (max-width: $bp-small) {
+                height: 10rem;
+                margin-left: 1rem;
+                margin-bottom: 6rem;
+            }
+
+        }
+
+        &--img:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    // header__nav
+    &__nav {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: right;
+        align-content: center;
+        grid-gap: 3rem;
+        list-style: none;
+
+        @media only screen and (max-width: $bp-medium) {
+            align-self: center;
+            justify-self: center;
+            grid-column: 3 / -1;
+            grid-auto-flow: row;
+
+        }
+
+        &--link:link,
+        &--link:visited {
+            color: $color-secondary;
+            text-decoration: none;
+        }
+
+        &--link-1:active {
+            background-color: $color-grey-dark-1;
+        }
+
+        &--link:hover {
+            color: $color-secondary;
+        }
+    }
+
+    &__item {
+        font-size: 1.8rem;
+        font-weight: 700;
+        transition: all .2s;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.1rem;
+            margin-top: -8rem;
+            font-weight: 700;
+            transition: all .2s;
+        }
+    }
+
+    &__item:hover {
+        transform: scale(1.1);
+    }
+
+}

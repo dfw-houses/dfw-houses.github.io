@@ -1,0 +1,117 @@
+.banner {
+
+    background-image: url(../img/hero.jpeg);
+    background-size: cover;
+    background-position: center;
+    grid-column: full-start / full-end;
+
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    align-items: center;
+
+
+    &__hero {
+        background-color: rgba($color-primary, .4);
+        grid-column: 4 / 8;
+        grid-row: 4 / 6;
+        padding: 2rem 1rem;
+        text-align: center;
+        text-transform: capitalize;
+        letter-spacing: .3rem;
+        color: whitesmoke;
+        transition: all .3s;
+
+        @media only screen and (max-width: $bp-small) {
+            padding: 3rem;
+            margin-top: 8.4rem;
+
+        }
+
+        //to be made dynamic
+        &__hero-listing {
+            background-color: rgba($color-grey-dark-1, .4);
+            grid-column: 4 / 8;
+            grid-row: 4 / 6;
+            padding: 2rem 1rem;
+            text-align: center;
+            text-transform: capitalize;
+            letter-spacing: .3rem;
+            color: whitesmoke;
+            transition: all .3s;
+
+            @media only screen and (max-width: $bp-small) {
+                padding: 3rem;
+                margin-top: 8.4rem;
+
+            }
+        }
+    }
+
+    &__text {
+        font-size: 2.2rem;
+        margin-bottom: 1.2rem;
+        font-weight: 400;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__heading {
+        @media only screen and (max-width: $bp-small) {
+            font-size: 2rem;
+        }
+    }
+
+    &__btn {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: .5rem .9rem;
+        border: 3px solid $color-grey-dark-1;
+        display: inline-block;
+        font-size: 1.8rem;
+        color: currentColor;
+        background:$color-secondary;
+        transition: all .3s;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.2rem;
+        }
+    }
+
+    //to be made dynamic
+    &__btn-listing {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: .5rem .9rem;
+        border: 3px solid $color-primary-2;
+        display: inline-block;
+        font-size: 1.8rem;
+        color: $color-primary-dark;
+        background: $tertiary-color;
+        transition: all .3s;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__btn:hover {
+        background: transparent;
+        color: whitesmoke;
+    }
+}
+
+//to be made dynamic
+.banner-listing {
+    background-image: url(../img/apart-8.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-column: full-start / full-end;
+
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    align-items: center;
+}
