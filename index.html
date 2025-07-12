@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- =========================================================
+      SEO META BLOCK — optimized for “Arlington TX real estate”,
+      “first-time homebuyer Arlington TX”, “sell home Arlington TX”.
+    ========================================================== -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Arlington TX Real Estate | Christine Ballard, eXp Realty</title>
+    <meta
+      name="description"
+      content="Discover Arlington TX real estate listings, neighborhood guides, and expert advice for first-time homebuyers and sellers from local REALTOR® Christine Ballard of eXp Realty."
+    />
+    <meta
+      name="keywords"
+      content="Arlington TX real estate, Arlington homes for sale, first-time homebuyer Arlington TX, sell home Arlington TX, eXp Realty"
+    />
+    <link rel="canonical" href="/" />
+    <meta name="robots" content="index,follow" />
+
+    <!-- OpenGraph / Twitter -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Arlington TX Real Estate | Christine Ballard" />
+    <meta
+      property="og:description"
+      content="Expert Arlington TX REALTOR® helping first-time buyers and sellers with listings, insider tips & free home valuations."
+    />
+    <meta property="og:url" content="/" />
+    <meta property="og:site_name" content="Christine Ballard Real Estate" />
+    <meta name="twitter:card" content="summary" />
+
+    <!-- Preconnects for performance -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://www.gstatic.com" />
+
+    <!-- Tailwind CSS (minified) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles & design system -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- JSON-LD: RealEstateAgent & Listings -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "RealEstateAgent",
+        "name": "Christine Ballard",
+        "url": "https://example.com/",
+        "image": "",
+        "telephone": "+1-000-000-0000",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Arlington",
+          "addressRegion": "TX"
+        },
+        "brand": {
+          "@type": "Organization",
+          "name": "eXp Realty"
+        }
+      }
+    </script>
+    <script type="application/ld+json" id="listing-schema"></script>
+
+    <!-- Google Analytics GA-4
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX");
+    </script>
+	Google Analytics GA-4 -->
+	
+    <!-- Google reCAPTCHA v2
+    <script
+      src="https://www.google.com/recaptcha/api.js"
+      async
+      defer
+    ></script>
+	Google reCAPTCHA v2 -->
+
+    <!-- robots.txt & sitemap.xml as Blob URLs -->
+    <script>
+      (() => {
+        const origin = location.origin || "";
+        const robotsContent = `User-agent: *\nAllow: /\nSitemap: ${origin}/sitemap.xml`;
+        const robotsBlob = new Blob([robotsContent], { type: "text/plain" });
+        const robotsURL = URL.createObjectURL(robotsBlob);
+        const robotsLink = document.createElement("link");
+        robotsLink.rel = "alternate";
+        robotsLink.type = "text/plain";
+        robotsLink.title = "robots.txt";
+        robotsLink.href = robotsURL;
+        document.head.appendChild(robotsLink);
+
+        const urls = ["/", "/#listings", "/#blog", "/#about", "/#contact"];
+        const sitemap = `<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">${urls
+          .map((u) => `\n  <url><loc>${origin}${u}</loc></url>`)
+          .join("")}\n</urlset>`;
+        const siteBlob = new Blob([sitemap], { type: "application/xml" });
+        const siteURL = URL.createObjectURL(siteBlob);
+        const siteLink = document.createElement("link");
+        siteLink.rel = "alternate";
+        siteLink.type = "application/xml";
+        siteLink.title = "sitemap.xml";
+        siteLink.href = siteURL;
+        document.head.appendChild(siteLink);
+      })();
+    </script>
+
+    <!-- React & ReactDOM -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/react@18/umd/react.production.min.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.production.min.js"
+      crossorigin
+    ></script>
+  </head>
+  <body>
+    <header class="sr-only">Arlington TX Real Estate Website by Christine Ballard</header>
+    <div id="root"></div>
+
+    <!-- Main application script -->
+    <script src="app.js"></script>
+  </body>
+</html>
