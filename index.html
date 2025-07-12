@@ -110,7 +110,9 @@
     <header class="sr-only">Arlington TX Real Estate Website by Christine Ballard</header>
     <div id="root"></div>
 
-    <!-- Main application script -->
-    <script src="https://dfw-houses.github.io/app.js"></script>
+    <!-- Babel compiler for in-browser JSX transformation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Main application script (compiled by Babel at runtime) -->
+    <script type="text/babel" src="https://dfw-houses.github.io/app.js"></script>
   </body>
 </html>
