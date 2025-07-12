@@ -1,3 +1,47 @@
+const DATA = {
+  bio_html: `<p>Christine Ballard is a seasoned <strong>Arlington, TX REALTOR®</strong> with eXp Realty, dedicated to guiding first-time buyers and sellers through every step of the real-estate journey. A lifelong Arlington resident, Christine leverages deep neighborhood knowledge, cutting-edge digital marketing, and unmatched client care to deliver exceptional results.</p>`,
+  listings: [
+    {
+      id: '4016-jasmine-fox',
+      address: '4016 Jasmine Fox Ln, Arlington, TX 76005',
+      price: 875000,
+      beds: 4,
+      baths: 3.5,
+      image: 'https://picsum.photos/seed/fox/640/420.webp',
+      description:
+        'Stunning 4-bedroom Viridian masterpiece featuring heated pool, gourmet granite kitchen, and spacious home office—perfect for remote professionals.',
+    },
+    {
+      id: '2912-elm-grove',
+      address: '2912 Elm Grove Ct, Arlington, TX 76006',
+      price: 685000,
+      beds: 3,
+      baths: 2.5,
+      image: 'https://picsum.photos/seed/elm/640/420.webp',
+      description:
+        'Elegant 3-bed North Arlington home near River Legacy Park. Natural light, vaulted ceilings, and entertainer’s patio space.',
+    }
+  ],
+  articles: [
+    {
+      slug: 'first-time-buyer-tips',
+      title: 'Top 5 Tips for First-Time Homebuyers in Arlington, TX',
+      html: '<p>Buying your first home in Arlington, TX can feel overwhelming—but it doesn’t have to be. Here are my top 5 pro tips to make it easier…</p>'
+    },
+    {
+      slug: 'should-i-stage-my-home',
+      title: 'Does Staging Help Homes Sell Faster in DFW?',
+      html: '<p>Short answer: yes. But the right strategy depends on your target buyer and price point. Let’s break down what works in Arlington and surrounding cities…</p>'
+    },
+    {
+      slug: 'market-update-july',
+      title: 'July Market Update: What’s Happening in Arlington Real Estate?',
+      html: '<p>Inventory is up, interest rates have stabilized, and buyers are back in force. Here’s how the Arlington real estate market is shifting this summer…</p>'
+    }
+  ]
+};
+const { useState, useEffect, useMemo, useContext } = React;
+
 function ToastProvider({ children }) {
   const [toast, setToast] = useState(null);
   const show = (msg) => {
@@ -379,4 +423,8 @@ function App() {
   );
 }
 
-ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <ToastProvider>
+    <RouterView />
+  </ToastProvider>
+);
